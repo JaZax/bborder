@@ -1,0 +1,11 @@
+{
+   "name" : "bborder",
+   "version" : "0.1",
+   "description" : "border visualizing dev tool",
+   "manifest_version" : 2,
+   "permissions": ["storage"],
+   "background" : {
+      "scripts" : ["main.js"],
+      "persistent" : false
+   }
+}
