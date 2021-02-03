@@ -1,3 +1,7 @@
 chrome.runtime.onMessage.addListener((msg)=>{
-    console.log('elo')
+    if(msg == 'elo'){
+
+        document.body.style['background'] = 'pink'
+
+    }
 })
