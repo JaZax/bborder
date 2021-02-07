@@ -5,6 +5,6 @@ chrome.runtime.onMessage.addListener((msg)=>{
 
 let body = domJSON.toJSON(document.body)
 
-document.body.addEventListener('click', ()=>{
+window.onload = ()=>{
     chrome.runtime.sendMessage(body)
-})
+}
