@@ -1,4 +1,5 @@
 const wrap = document.getElementById('wrap')
+let body
 
 window.onload = () => {
     let qInfo = {
@@ -17,26 +18,29 @@ window.onload = () => {
 
 // receive data from content
 chrome.runtime.onMessage.addListener((msg)=>{
+
+    // body = domJSON.toDOM(msg)
+    // document.body.appendChild(body)
+
     for(id in msg.node.childNodes){
         //console.log(msg.node.childNodes[id])
-        tree(msg.node.childNodes[id])
+        tree(msg.node.childNodes[id], wrap)
     }
+
 })
 
-let tree = (elem) => {
-    console.log(elem)
-
+let tree = (elem, parent) => {
     let newEl = document.createElement('div')
 
-        newEl.id = 'Bb' + elem.id
+        newEl.id = elem.id
         newEl.innerText = elem.id
 
-        wrap.appendChild(newEl)
+        document.getElementById(parent.id).appendChild(newEl)
 
     if(elem.childNodes.length > 0){
         for(id in elem.childNodes){
             //console.log(elem.childNodes[id].id)
-            tree(elem.childNodes[id])
+            tree(elem.childNodes[id], elem)
         }
     }
 }
