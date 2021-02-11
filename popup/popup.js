@@ -22,9 +22,12 @@ chrome.runtime.onMessage.addListener((msg)=>{
 
 // create a dom tree 
 let tree = (elem, parent) => {
+    console.log(elem)
+
     let newEl = document.createElement('div')
         newEl.id = elem.id
-        newEl.innerText = elem.id
+        if(elem.id != undefined) newEl.innerText = elem.id
+        else newEl.innerText = 'text content'
         newEl.classList = 'parent'
 
         // works only when there arent any divs with the same id

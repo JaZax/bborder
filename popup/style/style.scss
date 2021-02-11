@@ -1,5 +1,9 @@
 body{
     .parent{
-        border: solid white;
+        padding: .1em;
+        padding-left: .3em;
+        
+        user-select: none;
+        cursor: pointer;
     }
 }
