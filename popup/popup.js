@@ -31,7 +31,6 @@ chrome.runtime.onMessage.addListener((msg)=>{
 
 let tree = (elem, parent) => {
     let newEl = document.createElement('div')
-
         newEl.id = elem.id
         newEl.innerText = elem.id
 
@@ -40,6 +39,7 @@ let tree = (elem, parent) => {
     if(elem.childNodes.length > 0){
         for(id in elem.childNodes){
             //console.log(elem.childNodes[id].id)
+            console.log(elem.id)
             tree(elem.childNodes[id], elem)
         }
     }
