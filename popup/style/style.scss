@@ -1,9 +1,23 @@
 body{
+    #bBheader{
+        border-left: solid transparent;
+    }
+    p{
+        width: 100%;
+        margin: 0;
+        border: solid transparent;
+    }
     .parent{
-        padding: .1em;
+
+       // padding: .1em;
         padding-left: .3em;
         
         user-select: none;
         cursor: pointer;
+        border-left: solid transparent;
+        transition: border 300ms;
+        &:hover{
+            border-left: solid #0f0f0f;
+        }
     }
 }

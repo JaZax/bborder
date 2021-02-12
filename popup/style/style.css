@@ -1,10 +1,26 @@
+body #bBheader {
+  border-left: solid transparent;
+}
+
+body p {
+  width: 100%;
+  margin: 0;
+  border: solid transparent;
+}
+
 body .parent {
-  padding: .1em;
   padding-left: .3em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  border-left: solid transparent;
+  -webkit-transition: border 300ms;
+  transition: border 300ms;
+}
+
+body .parent:hover {
+  border-left: solid #0f0f0f;
 }
 /*# sourceMappingURL=style.css.map */
